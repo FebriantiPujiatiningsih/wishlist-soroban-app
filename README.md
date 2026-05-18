@@ -1,118 +1,66 @@
-# Stellar Notes DApp
+# 🌸 Stellar Wishlist Vault DApp
 
-**Stellar Notes DApp** - Blockchain-Based Decentralized Note-Taking System
+Stellar Wishlist Vault DApp is a decentralized personal wishlist and target tracking application built using Soroban Smart Contract on Stellar Testnet.
 
 ## Project Description
 
-Stellar Notes DApp is a decentralized smart contract solution built on the Stellar blockchain using Soroban SDK. It provides a secure, immutable platform for managing personal notes directly on the blockchain. The contract ensures that your data is stored transparently and is only manageable through predefined smart contract functions, eliminating reliance on centralized database providers.
+Stellar Wishlist Vault DApp helps users store and manage their personal wishlist items on the blockchain. Users can record desired items such as gadgets, books, skincare, travel goals, or personal targets.
 
-The system allows users to create, view, and delete notes, leveraging the efficiency and security of the Stellar network. Each note is uniquely identified and stored within the contract's instance storage, ensuring data persistence and reliability.
+Each wishlist item contains an item name, category, target price, priority level, and achievement status. The data is stored using Soroban smart contract storage, making the wishlist more transparent and decentralized.
 
 ## Project Vision
 
-Our vision is to revolutionize personal productivity in the digital age by:
+The vision of Stellar Wishlist Vault DApp is to help individuals organize their personal goals and desired items in a secure and decentralized way.
 
-- **Decentralizing Data**: Moving note-taking from centralized servers to a global, distributed blockchain
-- **Ensuring Ownership**: Empowering users to have complete control and ownership over their digital thoughts and information
-- **Guaranteeing Immutability**: Providing a permanent, tamper-proof record of notes that cannot be altered or deleted by third parties
-- **Enhancing Privacy**: Leveraging blockchain security to protect personal information from unauthorized access
-- **Building Trustless Systems**: Creating a platform where data integrity is guaranteed by code, not by company promises
-
-We envision a future where digital information is truly personal and sovereign, empowering individuals with complete autonomy over their digital assets.
+This project combines personal target tracking with blockchain technology, allowing users to keep meaningful wishlist records without relying on a centralized database.
 
 ## Key Features
 
-### 1. **Simple Note Creation**
+- Create a personal wishlist item
+- Add item category
+- Add target price
+- Add priority level
+- View all wishlist items
+- Mark wishlist item as achieved
+- Update wishlist priority
+- Delete wishlist item by ID
+- Store wishlist data using Soroban smart contract storage
 
-- Create notes with just one function call
-- Specify title and content for each note
-- Automated ID generation for unique identification
-- Persistent storage on the Stellar blockchain
+## Smart Contract Functions
 
-### 2. **Efficient Data Retrieval**
+### get_wishlist
 
-- Fetch all stored notes in a single call
-- Structured data representation for easy frontend integration
-- Quick access to your entire note collection
-- Real-time synchronization with the blockchain state
+Returns all wishlist items stored in the smart contract.
 
-### 3. **Secure Deletion**
+### create_wishlist
 
-- Remove specific notes using their unique IDs
-- Permanent removal from the contract storage
-- Clean and efficient storage management
-- Immediate update of the note list after deletion
+Creates a new wishlist item with item name, category, target price, and priority.
 
-### 4. **Transparency and Security**
+### achieve_wishlist
 
-- View all note activities on the blockchain
-- Blockchain-based verification of all storage actions
-- Immutable records of note creation and deletion
-- Protected against unauthorized modifications
+Marks a wishlist item as achieved based on its ID.
 
-### 5. **Stellar Network Integration**
+### update_priority
 
-- Leverages the high speed and low cost of Stellar
-- Built using the modern Soroban Smart Contract SDK
-- Scalable architecture for growing note collections
-- Interoperable with other Stellar-based services
+Updates the priority level of a wishlist item.
 
-## Contract Details
+### delete_wishlist
 
-- Contract Address: CBLU4IUASQ4WUMOXBFLZRSBBLILGOH33GS4LUPKFBCCCMJCDQNMF7G2M
-  (Screenshot has been removed)
+Deletes a wishlist item based on its ID.
 
-## Future Scope
+## Data Structure
 
-### Short-Term Enhancements
+```rust
+pub struct WishlistItem {
+    id: u64,
+    item_name: String,
+    category: String,
+    target_price: u64,
+    priority: String,
+    is_achieved: bool,
+}
 
-1. **Note Encryption**: Support for end-to-end encryption of note content for enhanced privacy
-2. **Category Management**: Add tags and categories to organize notes efficiently
-3. **Rich Text Support**: Extend support beyond plain text to include Markdown and formatted content
-4. **Search Functionality**: Implement advanced search filters for large note collections
+## Deployment Information
 
-### Medium-Term Development
-
-5. **Collaborative Notes**: Implement multi-signature requirements for shared or collaborative note-taking
-   - Shared access for multiple addresses
-   - Permission-based editing and viewing
-   - Version history tracking
-6. **Notification System**: Off-chain bridge to alert users of new updates or shared notes
-7. **Asset Attachment**: Capability to attach digital assets or tokens to specific notes
-8. **Inter-Contract Integration**: Allow other smart contracts to interact with and store data in the notes contract
-
-### Long-Term Vision
-
-9. **Cross-Chain Synchronization**: Extend note storage to multiple blockchain networks
-10. **Decentralized UI Hosting**: Host the frontend on IPFS or similar decentralized platforms
-11. **AI-Powered Summarization**: Optional integration with AI to help users summarize their notes
-12. **Privacy Layers**: Implement zero-knowledge proofs for completely private note content
-13. **DAO Governance**: Community-driven protocol improvements and feature prioritization
-14. **Identity Management**: Integration with decentralized identity (DID) systems for user management
-
-### Enterprise Features
-
-15. **Corporate Documentation**: Adapt the system for secure corporate record-keeping
-16. **Immutable Logging**: Create time-locked logs for audit purposes
-17. **Automated Reporting**: Automatic note triggers for periodic reporting
-18. **Multi-Language Support**: Expand accessibility with internationalization
-
----
-
-## Technical Requirements
-
-- Soroban SDK
-- Rust programming language
-- Stellar blockchain network
-
-## Getting Started
-
-Deploy the smart contract to Stellar's Soroban network and interact with it using the three main functions:
-
-- `create_note()` - Create a new note with a title and content
-- `get_notes()` - Retrieve all stored notes from the contract
-- `delete_note()` - Remove a specific note by its ID
-
----
-
-**Stellar Notes DApp** - Securing Your Thoughts on the Blockchain
+Network: Stellar Testnet  
+Smart Contract ID: `CDYUV5R2XHQE3T7ID3TRJLUX22GXP725RRXYMEL6AFMLXHGU65YM4Z2F`

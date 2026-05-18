@@ -1,0 +1,40 @@
+// index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wishlist Soroban App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Wishlist Soroban App</h1>
+      <p>Track your dream items on Stellar Testnet</p>
+    </header>
+
+    <section class="card form-card">
+      <h2>Add Wishlist</h2>
+
+      <input type="text" id="itemName" placeholder="Item name" />
+      <input type="text" id="category" placeholder="Category" />
+      <input type="number" id="targetPrice" placeholder="Target price" />
+      <select id="priority">
+        <option value="High">High Priority</option>
+        <option value="Medium">Medium Priority</option>
+        <option value="Low">Low Priority</option>
+      </select>
+
+      <button onclick="addWishlist()">Add Wishlist</button>
+    </section>
+
+    <section>
+      <h2 class="section-title">My Wishlist</h2>
+      <div id="wishlistContainer" class="wishlist-grid"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

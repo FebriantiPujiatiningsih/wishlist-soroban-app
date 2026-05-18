@@ -1,0 +1,126 @@
+// style.css
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #ffe6f2, #f3e8ff);
+  color: #3b2f3f;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #7b647f;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(164, 91, 132, 0.18);
+}
+
+.form-card {
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: 1px solid #f1c5dd;
+  border-radius: 14px;
+  outline: none;
+  font-size: 15px;
+}
+
+input:focus,
+select:focus {
+  border-color: #e46aa6;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 14px;
+  background: #e46aa6;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #d94f95;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.wishlist-card {
+  background: white;
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(164, 91, 132, 0.15);
+}
+
+.wishlist-card h3 {
+  margin-top: 0;
+  color: #c43f83;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: #ffe0ef;
+  color: #c43f83;
+  margin-bottom: 8px;
+}
+
+.achieved {
+  background: #d7ffe2;
+  color: #208a43;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.card-actions button {
+  font-size: 13px;
+  padding: 10px;
+}

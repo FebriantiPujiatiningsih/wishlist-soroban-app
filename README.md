@@ -1,4 +1,4 @@
-# 🌸 Stellar Wishlist Vault DApp
+# Stellar Wishlist Vault DApp
 
 Stellar Wishlist Vault DApp is a decentralized personal wishlist and target tracking application built using Soroban Smart Contract on Stellar Testnet.
 
